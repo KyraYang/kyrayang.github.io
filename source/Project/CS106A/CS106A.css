@@ -1,0 +1,68 @@
+nav{
+width: 800px;
+margin: auto;
+background-color: white;
+display: inline-block;
+position: fixed;
+top:0;
+z-index: 1000;
+}
+.navBar>p{
+  text-align: center;;
+  font-style: normal;
+  display: inline-block;
+  padding: 10px 10px;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+}
+
+
+body{
+  font-size: 16px;
+  width:760px;
+  margin: 0 auto;
+  padding-top: 30px;
+  font-family: Georgia;STKaiti; KaiTi; sans-serif;
+}
+header{
+  text-align: center;
+  width: 100%;
+  padding-top: 30px;
+}
+  #header{
+    display:inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    width: 500px;
+  }
+  #logo{
+    float:left;
+    text-align: center;
+    clear: both;
+  }
+.content>section{
+  padding: 17px;
+}
+#Videos,#Download{
+  display: none;
+}
+.photo{
+  width: 100%;
+  height: 510px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+#player{
+  padding: 10px;
+}
+
+a:link,a:visited{
+  color: inherit;
+  text-decoration: none;
+  font-style: italic;
+}
+a:hover,a:active{
+  color:grey;
+  text-decoration: underline;
+}
