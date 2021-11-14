@@ -105,4 +105,4 @@ deploy:
 
 #favicon
 favicon:
-  small: /images/favicon.ico
+  small: /source/images/favicon.ico
