@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>JAVA公开课 - CS106A</title>
+  <link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./CS106A.css">
+  <script src="https://cdn.static.runoob.com/libs/jquery/2.2.1/jquery.min.js"></script>
+  <script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<div class="container">
+  <nav class="navBar row">
+    <p class="col-md-4  nav-Introduction"><a href="#">Introduction</a></p>
+    <p class="col-md-4  nav-Videos"><a href="#">Videos</a></p>
+    <p class="col-md-4  nav-Download"><a href="#">Download</a></p>
+  </nav>
+</div>
+<script>
+  $('.navBar p').click(function () {
+    var choose = $(this);
+    if (!choose.hasClass('active')) {
+      $('.navBar p').removeClass('active');
+      choose.addClass('active');
+      if (choose.hasClass('nav-Introduction')) {
+        $('#Introduction').show();
+        $('#Videos').hide();
+        $('#Download').hide();
+      } else if (choose.hasClass('nav-Videos')) {
+        $('#Introduction').hide();
+        $('#Videos').show();
+        $('#Download').hide();
+      } else if (choose.hasClass('nav-Download')) {
+        $('#Introduction').hide();
+        $('#Videos').hide();
+        $('#Download').show();
+      }
+    }
+  })
+</script>
+
+<body>
+  <header>
+    <div id="header">
+      <img id="logo" src="./images/logo.gif" width="100px">
+      <p></p>
+      <p>斯坦福大学公开课</p>
+      <p>CS106A Programming Methodology</p>
+    </div>
+  </header>
+  <div class="content">
+    <section id='Introduction'>
+      <div class="photo">
+        <div id="AssigPhoto" class="carousel slide">
+          <ol class="carousel-indicators">
+            <li data-target="#AssigPhoto" data-slide-to="0" class="active"></li>
+            <li data-target="#AssigPhoto" data-slide-to="1"></li>
+            <li data-target="#AssigPhoto" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="./images/breakout.png" width="100%" height="500px" alt="1">
+              <div class="carousel-caption">Breakout</div>
+            </div>
+            <div class="item">
+              <img src="./images/hangman.png" width="100%" height="500px" alt="2">
+              <div class="carousel-caption">Hangman</div>
+            </div>
+            <div class="item">
+              <img src="./images/yahtzee.png" width="100%" height="500px" alt="3">
+              <div class="carousel-caption">Yahtzee</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        $(function () {
+          $('.carousel').carousel({
+            interval: 2000,
+            wrap: true,
+          })
+        })
+      </script>
+      <h2 class="title">Introduction</h2>
+      <p>CS106A Programming Methodology是斯坦福大学的编程入门课，针对的是编程零基础的学术，通过Java语言教导编程原理和方法。</p>
+      <p>这个公开课在B站上有带字幕的资源，但是配套的作业不好下载，所以就整理了一下把它们放在一起方便大家下载啦。</p>
+      <p>为什么推荐这个课程呢？因为这个课的作业都是一个个小项目，难度也设置的特别合理，绝不超纲，但是做出来的作品又特别有成就感，都是些小游戏什么的。可以说是我学的多个公开课里最有意思，也是最能坚持下来的一个。</p>
+      <h4>课程原网站</h4>
+      <a href="https://see.stanford.edu/Course/CS106A" target="_blank">CS106A - Programming Methodology</a>
+      <h4>后续课程</h4>
+      <a href="https://see.stanford.edu/Course/CS106B" target="_blank">CS106B - Programming Abstractions</a>
+      </br>
+      <a href="https://see.stanford.edu/Course/CS107" target="_blank">CS107 - Programming Paradigms</a>
+    </section>
+    <section id="Videos">
+      <h2 class="title">Videos</h2>
+      <p>B 站合集</p>
+      <a href="https://www.bilibili.com/video/av8048664/" target="_blank">斯坦福大学公开课：编程方法学28集全</a>
+      <div id="player">
+        <p>01：课程简介</p>
+        <iframe src="//player.bilibili.com/player.html?aid=8048664&cid=13228131&page=1" scrolling="no" border="0"
+          frameborder="no" framespacing="0" allowfullscreen="true" style="width:640px; height:460px"> </iframe>
+      </div>
+      <script type="text/javascript">
+        function chooseLesson(btn) {
+          var player_element = document.getElementById('player');
+          var page = btn.id;
+          var title = btn.value;
+          player_element.innerHTML = '<p>' + title + '</p> <iframe src="//player.bilibili.com/player.html?aid=8048664&cid=' + page + '" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width:640px; height:460px"> </iframe>';
+        }
+      </script>
+      <div id="lesson" class="btn-group container-fluid" role="group" aria-label="lessons">
+        <div class="row">
+          <input onclick="chooseLesson(this)" onclick="chooseLesson(this)" type="button"
+            class="btn btn-default col-md-3" id='13228131&page=1' value="01:课程简介"></input>
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13228132&page=2'
+            value="02:欢迎来到Karel的世界"></input>
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13228133&page=3'
+            value="03:Karel与Java"></input>
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13228134&page=4'
+            value="04:计算科学发展史"></input>
+        </div>
+        <div class="row">
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13228135&page=5'
+            value="05:变量"></input>
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13228136&page=6'
+            value="06:操作符"></input>
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13228137&page=7'
+            value="07:循环与“一半”问题"></input>
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13228138&page=8'
+            value="08:信息隐藏"></input>
+        </div>
+        <div class="row">
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13256353&page=9'
+            value="09:字符串"></input>
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13256354&page=10'
+            value="10:私有变量的重要性"></input>
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13228141&page=11'
+            value="11:Gimage类"></input>
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13228142&page=12'
+            value="12:枚举"></input>
+        </div>
+        <div class="row">
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13228143&page=13'
+            value="13:对字符串的处理"></input>
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13228144&page=14'
+            value="14:内存"></input>
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13228145&page=15'
+            value="15:指针要点回顾"></input>
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13228146&page=16'
+            value="16:数组"></input>
+        </div>
+        <div class="row">
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13228147&page=17'
+            value="17:多维数组"></input>
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13228148&page=18'
+            value="18:多维数组收尾"></input>
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13228149&page=19'
+            value="19:接口"></input>
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13228150&page=20'
+            value="20:图形用户界面"></input>
+        </div>
+        <div class="row">
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13228151&page=21'
+            value="21:InteractorListener回顾"></input>
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13228152&page=22'
+            value="22:NameSurfer概述"></input>
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13228153&page=23'
+            value="23:搜索，排序与算法效率分析"></input>
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13228154&page=24'
+            value="24:管理好大型数据的原理"></input>
+        </div>
+        <div class="row">
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13228155&page=25'
+            value="25:设计实用社交网络"></input>
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13228156&page=26'
+            value="26:介绍Java标准库"></input>
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13228157&page=27'
+            value="27:CS106A后续课程介绍"></input>
+          <input onclick="chooseLesson(this)" type="button" class="btn btn-default col-md-3" id='13228158&page=28'
+            value="28:宣布图形比赛结果"></input>
+        </div>
+      </div>
+    </section>
+    <div id='Download'>
+      <section id='Software'>
+        <h2 class="title">Software</h2>
+        <p>课程使用装有插件的Eclipse，可以按照链接里的指引安装。</p>
+        <a href="http://web.stanford.edu/class/archive/cs/cs106a/cs106a.1174//handouts/eclipse.html"
+          target="_blank">Installing Eclipse</a>
+        <p>相关文件已经上传百度云，可以从这里下啦。</p>
+        <p><a href="https://pan.baidu.com/s/1miKF072"
+            target="_blank">百度云</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp密码：9mr1 </p>
+      </section>
+      <section id='eBooks'>
+        <h2 class="title">eBooks</h2>
+        <p>有两本可参考的电子书</p>
+        <ul>
+          <li>KAREL THE ROBOT（只在前几课用到）</li>
+          <li>The Art and Science of Java（没有包括最后几课的内容，但是还是比较有用的）</li>
+        </ul>
+        <p><a href="https://pan.baidu.com/s/1boEBVuZ"
+            target="_blank">百度云</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp密码：383w </p>
+      </section>
+      <section id='Assignments'>
+        <h2 class="title">Assignments</h2>
+        <p>大作业，没有答案，只要能实现作业的要求就算对了。</p>
+        <p><a href="https://pan.baidu.com/s/1skMqNBf"
+            target="_blank">百度云</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp密码：7das </p>
+      </section>
+      <section id='Sections'>
+        <h2 class="title">Sections</h2>
+        <p>小练习，需要自己导入空白Java Project</p>
+        <p><a href="https://pan.baidu.com/s/1jHExDMe"
+            target="_blank">百度云</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp密码：s6ty </p>
+      </section>
+      <section id='SuppMaterial'>
+        <h2 class="title">Supplimentary Material</h2>
+        <p>ACM 库描述</p>
+        <a href="http://cs.stanford.edu/people/eroberts/jtf/javadoc/student/index.html" target="_blank">The ACM Java
+          Libraries</a>
+        <p>补充一些课件，不一定有用。</p>
+        <p><a href="http://pan.baidu.com/s/1mh78COC"
+            target="_blank">百度云</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp密码：cfpg </p>
+      </section>
+    </div>
+  </div>
+  <footer>
+    <p>欢迎<a href="http://weibo.com/echo0731/" target="_blank">@Kyra的微博</a>
+      </br>
+      2017
+    </p>
+  </footer>
+</body>
+
+</html>
