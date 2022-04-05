@@ -27,7 +27,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/kyrayang/git_pictures@master/images/20220405124205.png">
 <meta property="article:published_time" content="2022-04-05T04:34:55.000Z">
-<meta property="article:modified_time" content="2022-04-05T04:44:45.905Z">
+<meta property="article:modified_time" content="2022-04-05T04:46:17.675Z">
 <meta property="article:author" content="Kyra">
 <meta property="article:tag" content="曼基康猫">
 <meta property="article:tag" content="基因">
@@ -46,7 +46,20 @@
     lang   : 'en'
   };
 </script>
-
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
+#needsharebutton-postbottom {
+  cursor: pointer;
+  height: 26px;
+  margin-top: 10px;
+  position: relative;
+}
+#needsharebutton-postbottom .btn {
+  border: 1px solid $btn-default-border-color;
+  border-radius: 3px;
+  display: initial;
+  padding: 1px 4px;
+}
+</style>
   <title>曼基康猫的短腿基因 | A blog</title>
   
 
@@ -181,7 +194,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2022-04-05 12:34:55 / Modified: 12:44:45" itemprop="dateCreated datePublished" datetime="2022-04-05T12:34:55+08:00">2022-04-05</time>
+              <time title="Created: 2022-04-05 12:34:55 / Modified: 12:46:17" itemprop="dateCreated datePublished" datetime="2022-04-05T12:34:55+08:00">2022-04-05</time>
             </span>
 
           
@@ -256,7 +269,13 @@
 
     
     
-    
+    <div class="post-widgets">
+      <div id="needsharebutton-postbottom">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
 
       <footer class="post-footer">
           <div class="post-tags">
@@ -454,6 +473,15 @@
 
   
 
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script>
+  <script>
+      pbOptions = {};
+        pbOptions.iconStyle = "default";
+        pbOptions.boxForm = "horizontal";
+        pbOptions.position = "bottomCenter";
+        pbOptions.networks = "Weibo,Wechat,Douban,Twitter";
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+  </script>
 
 <script>
 NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
