@@ -81,10 +81,12 @@ markdown:
     case: 0
     separator: '-'
 theme: next
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
   branch: master
-  repo: 'https://:x-oauth-basic@github.com/KyraYang/kyrayang.github.io'
-  message: 'Site updated {{ now(''YYYY-MM-DD HH:mm:ss'') }}'
+  repo: 'git@github.com:KyraYang/kyrayang.github.io.git'
+  message: Site updated {{ now('YYYY-MM-DD HH:mm:ss') }}
 favicon:
   small: /source/images/favicon.ico

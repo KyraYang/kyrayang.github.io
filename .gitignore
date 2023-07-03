@@ -3,10 +3,12 @@ node_modules/
 
 .DS_Store
 
-public/
+public/*
 
-.deploy_git/
+/.deploy_git/
 
-_config.local.yml
+package-lock.json
 
-_multiconfig.yml
+package.json
+
+db.json
