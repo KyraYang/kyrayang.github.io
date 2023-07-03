@@ -88,4 +88,3 @@ deploy:
   message: 'Site updated {{ now(''YYYY-MM-DD HH:mm:ss'') }}'
 favicon:
   small: /source/images/favicon.ico
-local: _config.local.yml
