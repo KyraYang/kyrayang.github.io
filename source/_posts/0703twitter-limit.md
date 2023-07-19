@@ -2,7 +2,7 @@
 title: Twitter不自由
 date: 2023-07-04
 tags:
-    - life
+    - Life
 ---
 
 好久没有写blog了，本来想一段时间就发一篇论文的总结，结果却因为各种原因而搁置。知道昨天Twitter设了limit，那种被平台卡脖子的感觉又回来了。
